@@ -20,18 +20,18 @@ architecture a_processador of processador is
 	
 	component contador is
 		port(	
-			data_in_contador  : 	in unsigned(6 downto 0);
-			data_out_contador : 	out unsigned(6 downto 0)
+			data_in_contador  : in unsigned(6 downto 0);
+			data_out_contador : out unsigned(6 downto 0)
 		);
 	end component;	
 
 	component PC is
 		port(	
-			clk 	 : 	in std_logic;
-			wr_en 	 : 	in std_logic;
-			rst		 :  in std_logic;
-			data_in  : 	in unsigned(6 downto 0);
-			data_out : 	out unsigned(6 downto 0)
+			clk 	 	: in std_logic;
+			wr_en 	 	: in std_logic;
+			rst		 	: in std_logic;
+			data_in  	: in unsigned(6 downto 0);
+			data_out 	: out unsigned(6 downto 0)
 		);
 	end component;
 	
@@ -59,52 +59,63 @@ architecture a_processador of processador is
 	
 	component ULA is
 		port(	
-			entr0	: in unsigned(15 downto 0);
-			entr1	: in unsigned(15 downto 0);
-			selec	: in unsigned(1 downto 0);
-			saida	: out unsigned(15 downto 0);
-			maior 	: out std_logic;
-			carry	: out std_logic;
-			borrow  : out std_logic;
-			zero	: out std_logic
+			entr0		: in unsigned(15 downto 0);
+			entr1		: in unsigned(15 downto 0);
+			selec		: in unsigned(1 downto 0);
+			saida		: out unsigned(15 downto 0);
+			maior 		: out std_logic;
+			carry		: out std_logic;
+			borrow  	: out std_logic;
+			zero		: out std_logic
 		);
 	end component;
 	
 	component decoder is
 		port( 
-			dado 	: in unsigned(15 downto 0);
-			opcode 	: out unsigned(3 downto 0);
-			reg1	: out unsigned(2 downto 0);
-			reg2	: out unsigned(2 downto 0);
-			wrData 	: out unsigned(15 downto 0)
+			dado 		: in unsigned(15 downto 0);
+			opcode 		: out unsigned(3 downto 0);
+			reg1		: out unsigned(2 downto 0);
+			reg2		: out unsigned(2 downto 0);
+			wrData 		: out unsigned(15 downto 0)
 		);
 	end component;
 	
 	component UC is
 		port( 	
-			clk 			: in std_logic;
-			rst				: in std_logic;
-			opcode  		: in unsigned(3 downto 0);
-			borrow			: in std_logic;
-			zero 			: in std_logic;
-			estadoUC		: out unsigned(1 downto 0);
-			jump			: out unsigned(1 downto 0);
-			wr_en_PC		: out std_logic;
-			selec_wrData	: out std_logic;
-			wr_en_b			: out std_logic;
-			selec_ULA		: out unsigned(1 downto 0);
-			cmp				: out std_logic
+			clk 		: in std_logic;
+			rst			: in std_logic;
+			opcode  	: in unsigned(3 downto 0);
+			borrow		: in std_logic;
+			zero 		: in std_logic;
+			estadoUC	: out unsigned(1 downto 0);
+			jump		: out unsigned(1 downto 0);
+			wr_en_PC	: out std_logic;
+			selec_wrData: out unsigned(1 downto 0);
+			wr_en_b		: out std_logic;
+			selec_ULA	: out unsigned(1 downto 0);
+			cmp			: out std_logic;
+			wr_en_ram	: out std_logic
 		);
 	end component;
-	
+
 	component reg1bit is
 		port( 
-			entrada : in std_logic;
-			clk : in std_logic;
-			rst : in std_logic;
-			saida : out std_logic
+			entrada 	: in std_logic;
+			clk 		: in std_logic;
+			rst 		: in std_logic;
+			saida 		: out std_logic
 			
 		);
+	end component;
+
+	component ram is
+	port(
+			clk 		: in std_logic;
+			endereco 	: in unsigned(15 downto 0);
+			wr_en 		: in std_logic;
+			dado_in 	: in unsigned(15 downto 0);
+			dado_out 	: out unsigned(15 downto 0)
+	);
 	end component;
 	
 	
@@ -144,6 +155,11 @@ architecture a_processador of processador is
 	signal jumpCond					: unsigned(6 downto 0);
 	
 	signal clk_borrow_zero			: std_logic;
+
+	signal end_ram					: unsigned(15 downto 0);
+	signal wr_en_ram				: std_logic;
+	signal data_out_ram				: unsigned(15 downto 0);
+
 
 	
 	
@@ -210,7 +226,8 @@ begin
 					wr_en_b		=> wr_en_b,
 					selec_ULA 	=> selec_ULA,
 					estadoUC	=> estado_p,
-					cmp			=> cmp
+					cmp			=> cmp,
+					wr_en_ram	=> wr_en_ram
 					);
 					
 	reg_borrow: reg1bit port map(
@@ -226,10 +243,20 @@ begin
 					rst 	=> rst_p,
 					saida 	=> zero_UC
 					);
+
+	ram0: ram port map(
+					clk 		=> clk_p,
+					endereco 	=> end_ram,
+					wr_en 		=> wr_en_ram,
+					dado_in 	=> readData1_b_ULA,
+					dado_out 	=> data_out_ram
+					);
+
 	
 	
-	wrData_b <= wrData_d when selec_wrData = '0' else
-				saida_ULA when selec_wrData = '1' else
+	wrData_b <= wrData_d when selec_wrData = '00' else
+				saida_ULA when selec_wrData = '01' else
+				data_out_ram when selec_wrData = '10' else
 				"0000000000000000";
 				
 	jumpCond <= dataOut_PC_In_c + wrData_d(6 downto 0);
@@ -246,6 +273,10 @@ begin
 	saida_ULA_p	<= saida_ULA;
 	
 	clk_borrow_zero <=  clk_p and (not selec_ULA(1) or selec_ULA(0));
+
+	end_ram <= 	readData1_b_ULA when wr_en_ram = '0' else
+				readData2_b_ULA when wr_en_ram = '1' else
+				'0';
 	
 	
 end architecture;

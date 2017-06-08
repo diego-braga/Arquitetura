@@ -12,10 +12,11 @@ entity UC is
 			estadoUC		: out unsigned(1 downto 0);
 			jump			: out unsigned(1 downto 0);
 			wr_en_PC		: out std_logic;
-			selec_wrData	: out std_logic;
+			selec_wrData	: out unsigned(1 downto 0);
 			wr_en_b			: out std_logic;
 			selec_ULA		: out unsigned(1 downto 0);
-			cmp				: out std_logic
+			cmp				: out std_logic;
+			wr_en_ram		: out std_logic
 	);
 end entity;
 
@@ -52,11 +53,12 @@ architecture a_UC of UC is
 			"10" when (opcode = "1010" and zero = '1') or ( opcode = "1011" and borrow = '1') else
 			"00";
 					
-	selec_wrData <=	'0' when opcode = "0010" and estado = "10" else
-					'1' when ( opcode = "0011"
+	selec_wrData <=	"00" when opcode = "0010" and estado = "10" else
+					"01" when ( opcode = "0011"
 							or opcode = "0100"
 							or opcode = "0110"
 							or opcode = "0111") and estado = "10" else
+					"10" when opcode = "1100" else
 					'0';
 					
 	wr_en_b <= 		'1' when ( opcode = "0010"
@@ -74,6 +76,9 @@ architecture a_UC of UC is
 					"11" when opcode = "0011" and estado = "10" else
 					"01" when opcode = "1001" and estado = "10" else
 					"10";
+
+	wr_en_ram <= '1' when opcode = "1101" and estado = "10" else
+				 '0';
 		
 	estadoUC <= estado;					
 	
