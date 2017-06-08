@@ -1,0 +1,41 @@
+[timestart] 0
+[size] 1000 600
+[pos] 392 -120
+*-26.940832 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.processador_tb.
+[treeopen] top.processador_tb.uut.
+@24
+#{top.processador_tb.uut.readreg1p[2:0]} top.processador_tb.uut.readreg1p[2] top.processador_tb.uut.readreg1p[1] top.processador_tb.uut.readreg1p[0]
+#{top.processador_tb.uut.readreg2p[2:0]} top.processador_tb.uut.readreg2p[2] top.processador_tb.uut.readreg2p[1] top.processador_tb.uut.readreg2p[0]
+#{top.processador_tb.uut.writeregp[2:0]} top.processador_tb.uut.writeregp[2] top.processador_tb.uut.writeregp[1] top.processador_tb.uut.writeregp[0]
+#{top.processador_tb.uut.jumpp[15:0]} top.processador_tb.uut.jumpp[15] top.processador_tb.uut.jumpp[14] top.processador_tb.uut.jumpp[13] top.processador_tb.uut.jumpp[12] top.processador_tb.uut.jumpp[11] top.processador_tb.uut.jumpp[10] top.processador_tb.uut.jumpp[9] top.processador_tb.uut.jumpp[8] top.processador_tb.uut.jumpp[7] top.processador_tb.uut.jumpp[6] top.processador_tb.uut.jumpp[5] top.processador_tb.uut.jumpp[4] top.processador_tb.uut.jumpp[3] top.processador_tb.uut.jumpp[2] top.processador_tb.uut.jumpp[1] top.processador_tb.uut.jumpp[0]
+#{top.processador_tb.uut.selecula[1:0]} top.processador_tb.uut.selecula[1] top.processador_tb.uut.selecula[0]
+@c00024
+#{top.processador_tb.uut.saidap[15:0]} top.processador_tb.uut.saidap[15] top.processador_tb.uut.saidap[14] top.processador_tb.uut.saidap[13] top.processador_tb.uut.saidap[12] top.processador_tb.uut.saidap[11] top.processador_tb.uut.saidap[10] top.processador_tb.uut.saidap[9] top.processador_tb.uut.saidap[8] top.processador_tb.uut.saidap[7] top.processador_tb.uut.saidap[6] top.processador_tb.uut.saidap[5] top.processador_tb.uut.saidap[4] top.processador_tb.uut.saidap[3] top.processador_tb.uut.saidap[2] top.processador_tb.uut.saidap[1] top.processador_tb.uut.saidap[0]
+@28
+top.processador_tb.uut.saidap[15]
+top.processador_tb.uut.saidap[14]
+top.processador_tb.uut.saidap[13]
+top.processador_tb.uut.saidap[12]
+top.processador_tb.uut.saidap[11]
+top.processador_tb.uut.saidap[10]
+top.processador_tb.uut.saidap[9]
+top.processador_tb.uut.saidap[8]
+top.processador_tb.uut.saidap[7]
+top.processador_tb.uut.saidap[6]
+top.processador_tb.uut.saidap[5]
+top.processador_tb.uut.saidap[4]
+top.processador_tb.uut.saidap[3]
+top.processador_tb.uut.saidap[2]
+top.processador_tb.uut.saidap[1]
+top.processador_tb.uut.saidap[0]
+@1401200
+-group_end
+@28
+top.processador_tb.uut.maiorp
+top.processador_tb.uut.carryp
+@29
+top.processador_tb.uut.zerop
+[pattern_trace] 1
+[pattern_trace] 0

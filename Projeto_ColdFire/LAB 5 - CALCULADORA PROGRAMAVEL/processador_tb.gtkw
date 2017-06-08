@@ -1,0 +1,17 @@
+[timestart] 0
+[size] 1600 837
+[pos] -191 -191
+*-29.465582 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.processador_tb.
+@24
+top.processador_tb.rst
+top.processador_tb.clk
+#{top.processador_tb.estado[1:0]} top.processador_tb.estado[1] top.processador_tb.estado[0]
+#{top.processador_tb.pc[6:0]} top.processador_tb.pc[6] top.processador_tb.pc[5] top.processador_tb.pc[4] top.processador_tb.pc[3] top.processador_tb.pc[2] top.processador_tb.pc[1] top.processador_tb.pc[0]
+#{top.processador_tb.instrucao[15:0]} top.processador_tb.instrucao[15] top.processador_tb.instrucao[14] top.processador_tb.instrucao[13] top.processador_tb.instrucao[12] top.processador_tb.instrucao[11] top.processador_tb.instrucao[10] top.processador_tb.instrucao[9] top.processador_tb.instrucao[8] top.processador_tb.instrucao[7] top.processador_tb.instrucao[6] top.processador_tb.instrucao[5] top.processador_tb.instrucao[4] top.processador_tb.instrucao[3] top.processador_tb.instrucao[2] top.processador_tb.instrucao[1] top.processador_tb.instrucao[0]
+#{top.processador_tb.reg1[15:0]} top.processador_tb.reg1[15] top.processador_tb.reg1[14] top.processador_tb.reg1[13] top.processador_tb.reg1[12] top.processador_tb.reg1[11] top.processador_tb.reg1[10] top.processador_tb.reg1[9] top.processador_tb.reg1[8] top.processador_tb.reg1[7] top.processador_tb.reg1[6] top.processador_tb.reg1[5] top.processador_tb.reg1[4] top.processador_tb.reg1[3] top.processador_tb.reg1[2] top.processador_tb.reg1[1] top.processador_tb.reg1[0]
+#{top.processador_tb.reg2[15:0]} top.processador_tb.reg2[15] top.processador_tb.reg2[14] top.processador_tb.reg2[13] top.processador_tb.reg2[12] top.processador_tb.reg2[11] top.processador_tb.reg2[10] top.processador_tb.reg2[9] top.processador_tb.reg2[8] top.processador_tb.reg2[7] top.processador_tb.reg2[6] top.processador_tb.reg2[5] top.processador_tb.reg2[4] top.processador_tb.reg2[3] top.processador_tb.reg2[2] top.processador_tb.reg2[1] top.processador_tb.reg2[0]
+#{top.processador_tb.saida_ula[15:0]} top.processador_tb.saida_ula[15] top.processador_tb.saida_ula[14] top.processador_tb.saida_ula[13] top.processador_tb.saida_ula[12] top.processador_tb.saida_ula[11] top.processador_tb.saida_ula[10] top.processador_tb.saida_ula[9] top.processador_tb.saida_ula[8] top.processador_tb.saida_ula[7] top.processador_tb.saida_ula[6] top.processador_tb.saida_ula[5] top.processador_tb.saida_ula[4] top.processador_tb.saida_ula[3] top.processador_tb.saida_ula[2] top.processador_tb.saida_ula[1] top.processador_tb.saida_ula[0]
+[pattern_trace] 1
+[pattern_trace] 0

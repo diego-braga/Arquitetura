@@ -1,0 +1,36 @@
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-26.957186 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.banco_tb.
+@24
+#{top.banco_tb.writereg[2:0]} top.banco_tb.writereg[2] top.banco_tb.writereg[1] top.banco_tb.writereg[0]
+#{top.banco_tb.writedata[15:0]} top.banco_tb.writedata[15] top.banco_tb.writedata[14] top.banco_tb.writedata[13] top.banco_tb.writedata[12] top.banco_tb.writedata[11] top.banco_tb.writedata[10] top.banco_tb.writedata[9] top.banco_tb.writedata[8] top.banco_tb.writedata[7] top.banco_tb.writedata[6] top.banco_tb.writedata[5] top.banco_tb.writedata[4] top.banco_tb.writedata[3] top.banco_tb.writedata[2] top.banco_tb.writedata[1] top.banco_tb.writedata[0]
+#{top.banco_tb.readreg1[2:0]} top.banco_tb.readreg1[2] top.banco_tb.readreg1[1] top.banco_tb.readreg1[0]
+#{top.banco_tb.readreg2[2:0]} top.banco_tb.readreg2[2] top.banco_tb.readreg2[1] top.banco_tb.readreg2[0]
+@c00024
+#{top.banco_tb.readdata1[15:0]} top.banco_tb.readdata1[15] top.banco_tb.readdata1[14] top.banco_tb.readdata1[13] top.banco_tb.readdata1[12] top.banco_tb.readdata1[11] top.banco_tb.readdata1[10] top.banco_tb.readdata1[9] top.banco_tb.readdata1[8] top.banco_tb.readdata1[7] top.banco_tb.readdata1[6] top.banco_tb.readdata1[5] top.banco_tb.readdata1[4] top.banco_tb.readdata1[3] top.banco_tb.readdata1[2] top.banco_tb.readdata1[1] top.banco_tb.readdata1[0]
+@28
+top.banco_tb.readdata1[15]
+top.banco_tb.readdata1[14]
+top.banco_tb.readdata1[13]
+top.banco_tb.readdata1[12]
+top.banco_tb.readdata1[11]
+top.banco_tb.readdata1[10]
+top.banco_tb.readdata1[9]
+top.banco_tb.readdata1[8]
+top.banco_tb.readdata1[7]
+top.banco_tb.readdata1[6]
+top.banco_tb.readdata1[5]
+top.banco_tb.readdata1[4]
+top.banco_tb.readdata1[3]
+top.banco_tb.readdata1[2]
+top.banco_tb.readdata1[1]
+top.banco_tb.readdata1[0]
+@1401204
+-group_end
+@24
+#{top.banco_tb.readdata2[15:0]} top.banco_tb.readdata2[15] top.banco_tb.readdata2[14] top.banco_tb.readdata2[13] top.banco_tb.readdata2[12] top.banco_tb.readdata2[11] top.banco_tb.readdata2[10] top.banco_tb.readdata2[9] top.banco_tb.readdata2[8] top.banco_tb.readdata2[7] top.banco_tb.readdata2[6] top.banco_tb.readdata2[5] top.banco_tb.readdata2[4] top.banco_tb.readdata2[3] top.banco_tb.readdata2[2] top.banco_tb.readdata2[1] top.banco_tb.readdata2[0]
+[pattern_trace] 1
+[pattern_trace] 0

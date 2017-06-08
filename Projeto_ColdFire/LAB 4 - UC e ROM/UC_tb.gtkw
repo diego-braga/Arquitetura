@@ -1,0 +1,20 @@
+[timestart] 0
+[size] 1600 837
+[pos] -87 -87
+*-29.002050 51000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.uc_tb.
+[treeopen] top.uc_tb.uut.
+@25
+top.uc_tb.uut.clk
+top.uc_tb.uut.rst
+top.uc_tb.uut.estado
+top.uc_tb.uut.jump
+top.uc_tb.uut.wr_en
+#{top.uc_tb.uut.opcode[3:0]} top.uc_tb.uut.opcode[3] top.uc_tb.uut.opcode[2] top.uc_tb.uut.opcode[1] top.uc_tb.uut.opcode[0]
+#{top.uc_tb.uut.saidarom[15:0]} top.uc_tb.uut.saidarom[15] top.uc_tb.uut.saidarom[14] top.uc_tb.uut.saidarom[13] top.uc_tb.uut.saidarom[12] top.uc_tb.uut.saidarom[11] top.uc_tb.uut.saidarom[10] top.uc_tb.uut.saidarom[9] top.uc_tb.uut.saidarom[8] top.uc_tb.uut.saidarom[7] top.uc_tb.uut.saidarom[6] top.uc_tb.uut.saidarom[5] top.uc_tb.uut.saidarom[4] top.uc_tb.uut.saidarom[3] top.uc_tb.uut.saidarom[2] top.uc_tb.uut.saidarom[1] top.uc_tb.uut.saidarom[0]
+#{top.uc_tb.uut.enderecooutcontador[6:0]} top.uc_tb.uut.enderecooutcontador[6] top.uc_tb.uut.enderecooutcontador[5] top.uc_tb.uut.enderecooutcontador[4] top.uc_tb.uut.enderecooutcontador[3] top.uc_tb.uut.enderecooutcontador[2] top.uc_tb.uut.enderecooutcontador[1] top.uc_tb.uut.enderecooutcontador[0]
+#{top.uc_tb.uut.enderecoinpc[6:0]} top.uc_tb.uut.enderecoinpc[6] top.uc_tb.uut.enderecoinpc[5] top.uc_tb.uut.enderecoinpc[4] top.uc_tb.uut.enderecoinpc[3] top.uc_tb.uut.enderecoinpc[2] top.uc_tb.uut.enderecoinpc[1] top.uc_tb.uut.enderecoinpc[0]
+#{top.uc_tb.uut.enderecooutpc_incontador[6:0]} top.uc_tb.uut.enderecooutpc_incontador[6] top.uc_tb.uut.enderecooutpc_incontador[5] top.uc_tb.uut.enderecooutpc_incontador[4] top.uc_tb.uut.enderecooutpc_incontador[3] top.uc_tb.uut.enderecooutpc_incontador[2] top.uc_tb.uut.enderecooutpc_incontador[1] top.uc_tb.uut.enderecooutpc_incontador[0]
+[pattern_trace] 1
+[pattern_trace] 0

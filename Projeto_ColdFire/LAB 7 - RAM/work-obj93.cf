@@ -1,0 +1,37 @@
+v 3
+file . "reg1bit.vhd" "20170525222750.000" "20170525204308.111":
+  entity reg1bit at 1( 0) + 0 on 73;
+  architecture a_reg1bit of reg1bit at 16( 232) + 0 on 74;
+file . "ULA.vhd" "20170526005542.000" "20170525215624.384":
+  entity ula at 1( 0) + 0 on 117;
+  architecture a_ula of ula at 17( 374) + 0 on 118;
+file . "reg16bits.vhd" "20170428175950.000" "20170525204258.205":
+  entity reg16bits at 1( 0) + 0 on 71;
+  architecture a_reg16bits of reg16bits at 14( 270) + 0 on 72;
+file . "rom.vhd" "20170526020714.000" "20170525230802.243":
+  entity rom at 1( 0) + 0 on 157;
+  architecture a_rom of rom at 12( 215) + 0 on 158;
+file . "contador.vhd" "20170505014038.000" "20170525204510.595":
+  entity contador at 1( 0) + 0 on 83;
+  architecture a_contador of contador at 11( 219) + 0 on 84;
+file . "decoder.vhd" "20170511232658.000" "20170525204529.417":
+  entity decoder at 1( 0) + 0 on 85;
+  architecture a_decoder of decoder at 18( 320) + 0 on 86;
+file . "UC.vhd" "20170526000542.000" "20170525210604.998":
+  entity uc at 1( 0) + 0 on 95;
+  architecture a_uc of uc at 22( 516) + 0 on 96;
+file . "MaqEstados.vhd" "20170511222224.000" "20170525204542.878":
+  entity maqestados at 1( 0) + 0 on 87;
+  architecture a_maqestados of maqestados at 11( 186) + 0 on 88;
+file . "PC.vhd" "20170505020606.000" "20170525204556.493":
+  entity pc at 1( 0) + 0 on 89;
+  architecture a_pc of pc at 14( 280) + 0 on 90;
+file . "banco.vhd" "20170428175756.000" "20170525204450.776":
+  entity banco at 1( 0) + 0 on 81;
+  architecture a_banco of banco at 23( 447) + 0 on 82;
+file . "processador.vhd" "20170526011942.000" "20170525230759.160":
+  entity processador at 1( 0) + 0 on 153;
+  architecture a_processador of processador at 19( 438) + 0 on 154;
+file . "processador_tb.vhd" "20170526012122.000" "20170525230801.479":
+  entity processador_tb at 1( 0) + 0 on 155;
+  architecture a_processador_tb of processador_tb at 8( 108) + 0 on 156;
